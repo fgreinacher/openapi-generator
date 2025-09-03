@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -62,7 +63,7 @@ public class TestInlineFreeformAdditionalPropertiesRequest {
    * @return someProperty
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOME_PROPERTY)
+  @JsonProperty(value = JSON_PROPERTY_SOME_PROPERTY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   @JacksonXmlProperty(localName = "someProperty")
 
@@ -71,7 +72,7 @@ public class TestInlineFreeformAdditionalPropertiesRequest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOME_PROPERTY)
+  @JsonProperty(value = JSON_PROPERTY_SOME_PROPERTY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   @JacksonXmlProperty(localName = "someProperty")
   public void setSomeProperty(@javax.annotation.Nullable String someProperty) {

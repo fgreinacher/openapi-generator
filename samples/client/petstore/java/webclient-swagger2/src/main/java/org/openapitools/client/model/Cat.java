@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -62,7 +63,7 @@ public class Cat extends Animal {
    */
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  @JsonProperty(JSON_PROPERTY_DECLAWED)
+  @JsonProperty(value = JSON_PROPERTY_DECLAWED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getDeclawed() {
@@ -70,7 +71,7 @@ public class Cat extends Animal {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DECLAWED)
+  @JsonProperty(value = JSON_PROPERTY_DECLAWED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDeclawed(@javax.annotation.Nullable Boolean declawed) {
     this.declawed = declawed;

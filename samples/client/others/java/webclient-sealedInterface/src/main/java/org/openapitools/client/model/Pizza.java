@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -64,7 +65,7 @@ public class Pizza extends Entity {
    * @return pizzaSize
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PIZZA_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_PIZZA_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BigDecimal getPizzaSize() {
@@ -72,7 +73,7 @@ public class Pizza extends Entity {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PIZZA_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_PIZZA_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPizzaSize(@javax.annotation.Nullable BigDecimal pizzaSize) {
     this.pizzaSize = pizzaSize;

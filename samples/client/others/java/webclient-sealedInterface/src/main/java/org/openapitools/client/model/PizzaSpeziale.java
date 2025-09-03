@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -61,7 +62,7 @@ public class PizzaSpeziale extends Pizza {
    * @return toppings
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOPPINGS)
+  @JsonProperty(value = JSON_PROPERTY_TOPPINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getToppings() {
@@ -69,7 +70,7 @@ public class PizzaSpeziale extends Pizza {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOPPINGS)
+  @JsonProperty(value = JSON_PROPERTY_TOPPINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setToppings(@javax.annotation.Nullable String toppings) {
     this.toppings = toppings;

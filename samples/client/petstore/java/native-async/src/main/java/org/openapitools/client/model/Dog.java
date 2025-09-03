@@ -19,6 +19,7 @@ import java.util.StringJoiner;
 import java.util.Objects;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -65,14 +66,14 @@ public class Dog extends Animal {
    * @return breed
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BREED)
+  @JsonProperty(value = JSON_PROPERTY_BREED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getBreed() {
     return breed;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BREED)
+  @JsonProperty(value = JSON_PROPERTY_BREED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBreed(@javax.annotation.Nullable String breed) {
     this.breed = breed;
@@ -167,17 +168,17 @@ public class Dog extends Animal {
 
     // add `className` to the URL query string
     if (getClassName() != null) {
-      joiner.add(String.format("%sclassName%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getClassName()))));
+      joiner.add(String.format(Locale.ROOT, "%sclassName%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getClassName()))));
     }
 
     // add `color` to the URL query string
     if (getColor() != null) {
-      joiner.add(String.format("%scolor%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getColor()))));
+      joiner.add(String.format(Locale.ROOT, "%scolor%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getColor()))));
     }
 
     // add `breed` to the URL query string
     if (getBreed() != null) {
-      joiner.add(String.format("%sbreed%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getBreed()))));
+      joiner.add(String.format(Locale.ROOT, "%sbreed%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getBreed()))));
     }
 
     return joiner.toString();

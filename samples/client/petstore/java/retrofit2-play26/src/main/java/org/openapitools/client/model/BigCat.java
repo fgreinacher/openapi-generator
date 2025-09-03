@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -102,7 +103,7 @@ public class BigCat extends Cat {
    */
   @jakarta.annotation.Nullable
 
-  @JsonProperty(JSON_PROPERTY_KIND)
+  @JsonProperty(value = JSON_PROPERTY_KIND, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public KindEnum getKind() {
@@ -110,7 +111,7 @@ public class BigCat extends Cat {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KIND)
+  @JsonProperty(value = JSON_PROPERTY_KIND, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKind(@jakarta.annotation.Nullable KindEnum kind) {
     this.kind = kind;

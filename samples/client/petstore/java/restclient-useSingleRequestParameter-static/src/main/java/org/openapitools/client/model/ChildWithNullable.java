@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -61,7 +62,7 @@ public class ChildWithNullable extends ParentWithNullable {
    * @return otherProperty
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OTHER_PROPERTY)
+  @JsonProperty(value = JSON_PROPERTY_OTHER_PROPERTY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getOtherProperty() {
@@ -69,7 +70,7 @@ public class ChildWithNullable extends ParentWithNullable {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OTHER_PROPERTY)
+  @JsonProperty(value = JSON_PROPERTY_OTHER_PROPERTY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOtherProperty(@jakarta.annotation.Nullable String otherProperty) {
     this.otherProperty = otherProperty;

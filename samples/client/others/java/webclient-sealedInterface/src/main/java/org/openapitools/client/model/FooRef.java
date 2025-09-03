@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -60,7 +61,7 @@ public final class FooRef extends EntityRef implements FooRefOrValue {
    * @return foorefPropA
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FOOREF_PROP_A)
+  @JsonProperty(value = JSON_PROPERTY_FOOREF_PROP_A, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFoorefPropA() {
@@ -68,7 +69,7 @@ public final class FooRef extends EntityRef implements FooRefOrValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FOOREF_PROP_A)
+  @JsonProperty(value = JSON_PROPERTY_FOOREF_PROP_A, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFoorefPropA(@javax.annotation.Nullable String foorefPropA) {
     this.foorefPropA = foorefPropA;

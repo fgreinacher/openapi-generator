@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.util.Objects;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -66,7 +67,7 @@ public class MySchemaNameCharacters extends Parent {
    * @return prop2
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROP2)
+  @JsonProperty(value = JSON_PROPERTY_PROP2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getProp2() {
@@ -74,7 +75,7 @@ public class MySchemaNameCharacters extends Parent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROP2)
+  @JsonProperty(value = JSON_PROPERTY_PROP2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setProp2(@javax.annotation.Nullable String prop2) {
     this.prop2 = prop2;

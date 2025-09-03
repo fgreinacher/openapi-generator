@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -65,7 +66,7 @@ public class DataQuery extends Query {
    * @return suffix
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSuffix() {
@@ -73,7 +74,7 @@ public class DataQuery extends Query {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuffix(@jakarta.annotation.Nullable String suffix) {
     this.suffix = suffix;
@@ -90,7 +91,7 @@ public class DataQuery extends Query {
    * @return text
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getText() {
@@ -98,7 +99,7 @@ public class DataQuery extends Query {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setText(@jakarta.annotation.Nullable String text) {
     this.text = text;
@@ -115,7 +116,7 @@ public class DataQuery extends Query {
    * @return date
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATE)
+  @JsonProperty(value = JSON_PROPERTY_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Instant getDate() {
@@ -123,7 +124,7 @@ public class DataQuery extends Query {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATE)
+  @JsonProperty(value = JSON_PROPERTY_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDate(@jakarta.annotation.Nullable Instant date) {
     this.date = date;

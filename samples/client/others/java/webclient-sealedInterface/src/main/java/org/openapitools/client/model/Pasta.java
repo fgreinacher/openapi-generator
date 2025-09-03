@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -60,7 +61,7 @@ public class Pasta extends Entity {
    * @return vendor
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVendor() {
@@ -68,7 +69,7 @@ public class Pasta extends Entity {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVendor(@javax.annotation.Nullable String vendor) {
     this.vendor = vendor;

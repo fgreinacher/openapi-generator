@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -55,7 +56,7 @@ public class AllOfWithSingleRef {
    * @return username
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USERNAME)
+  @JsonProperty(value = JSON_PROPERTY_USERNAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUsername() {
@@ -63,7 +64,7 @@ public class AllOfWithSingleRef {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USERNAME)
+  @JsonProperty(value = JSON_PROPERTY_USERNAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUsername(@javax.annotation.Nullable String username) {
     this.username = username;
@@ -81,7 +82,7 @@ public class AllOfWithSingleRef {
    * @return singleRefType
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SINGLE_REF_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SINGLE_REF_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SingleRefType getSingleRefType() {
@@ -89,7 +90,7 @@ public class AllOfWithSingleRef {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SINGLE_REF_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SINGLE_REF_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSingleRefType(@javax.annotation.Nullable SingleRefType singleRefType) {
     this.singleRefType = singleRefType;

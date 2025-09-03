@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -57,7 +58,7 @@ public final class Banana implements Fruit {
    * @return length
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LENGTH)
+  @JsonProperty(value = JSON_PROPERTY_LENGTH, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Integer getLength() {
@@ -65,7 +66,7 @@ public final class Banana implements Fruit {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LENGTH)
+  @JsonProperty(value = JSON_PROPERTY_LENGTH, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLength(@javax.annotation.Nonnull Integer length) {
     this.length = length;
@@ -82,7 +83,7 @@ public final class Banana implements Fruit {
    * @return fruitType
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_FRUIT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FRUIT_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public FruitType getFruitType() {
@@ -90,7 +91,7 @@ public final class Banana implements Fruit {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FRUIT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FRUIT_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFruitType(@javax.annotation.Nonnull FruitType fruitType) {
     this.fruitType = fruitType;

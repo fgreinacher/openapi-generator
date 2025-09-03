@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Locale;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -65,7 +66,7 @@ public final class Foo extends Entity implements FooRefOrValue {
    * @return fooPropA
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FOO_PROP_A)
+  @JsonProperty(value = JSON_PROPERTY_FOO_PROP_A, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFooPropA() {
@@ -73,7 +74,7 @@ public final class Foo extends Entity implements FooRefOrValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FOO_PROP_A)
+  @JsonProperty(value = JSON_PROPERTY_FOO_PROP_A, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFooPropA(@javax.annotation.Nullable String fooPropA) {
     this.fooPropA = fooPropA;
@@ -90,7 +91,7 @@ public final class Foo extends Entity implements FooRefOrValue {
    * @return fooPropB
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FOO_PROP_B)
+  @JsonProperty(value = JSON_PROPERTY_FOO_PROP_B, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFooPropB() {
@@ -98,7 +99,7 @@ public final class Foo extends Entity implements FooRefOrValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FOO_PROP_B)
+  @JsonProperty(value = JSON_PROPERTY_FOO_PROP_B, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFooPropB(@javax.annotation.Nullable String fooPropB) {
     this.fooPropB = fooPropB;
